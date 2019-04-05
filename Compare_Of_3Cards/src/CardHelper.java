@@ -133,14 +133,14 @@ public class CardHelper {
             level = "6";
         }else if(card.get(0).getSuit().equals(card.get(1).getSuit())
                 && card.get(1).getSuit().equals(card.get(2).getSuit())){ // 同花
-            if(num.get(0) == num.get(1)-1
-                    && num.get(1) == num.get(2)-1){ // 同花顺
+            if((num.get(0) == num.get(1)-1 && num.get(1) == num.get(2)-1)
+                    ||(num.get(0) == 0 && num.get(1) == 1 && num.get(2) == 12)){ // 同花顺
                 level = "5";
             }else{ // 普通同花
                 level = "4";
             }
-        }else if(num.get(0) == num.get(1)-1
-                && num.get(1) == num.get(2)-1){ // 顺子
+        }else if((num.get(0) == num.get(1)-1 && num.get(1) == num.get(2)-1)
+                || (num.get(0) == 0 && num.get(1) == 1 && num.get(2) == 12)){ // 顺子
             level = "3";
         }else if(num.get(0) == num.get(1) || num.get(1) == num.get(2)){ // 对子
             level = "2";
