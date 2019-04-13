@@ -32,7 +32,7 @@ public class CardHelper {
     }
 
     /**
-     *
+     * 发牌
      * @param cards 牌库
      * @return 牌表面的三张牌
      */
